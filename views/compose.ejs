@@ -1,0 +1,31 @@
+<body>
+  <%-include('partials/header')-%>
+  <div class="container">
+    <h1>compose</h1>
+
+    <div class="container d-block">
+      <form action="/compose" method="post">
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            placeholder="please write a message"
+            name="compose"
+            class="form-control mt-2 mb-2"
+          />
+          <textarea
+            class="form-control mt-2 mb-2"
+            name="message"
+            id=""
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <button type="submit" class="btn-lg btn btn-success mt-2 mb-2">
+          post
+        </button>
+      </form>
+    </div>
+  </div>
+  <%-include('partials/footer')-%>
+</body>

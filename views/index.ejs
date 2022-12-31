@@ -1,0 +1,17 @@
+<body>
+  <%-include('partials/header')-%>
+  <div class="container">
+    <h1>Home</h1>
+
+    <p><%= header%></p>
+
+    <% posts.forEach((post)=> { %>
+    <h1><%= post.newCompose %></h1>
+    <p>
+      <%= post.newMessage.substring(0,300) + "..." %>
+      <a href="/posts/<%= post.newCompose %>">read more</a>
+    </p>
+    <%})%>
+  </div>
+  <%-include('partials/footer')-%>
+</body>
